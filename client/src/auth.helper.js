@@ -6,8 +6,8 @@ const httpClient = axios.create();
 const tokenName = 'user';
 const domain =
   !process.env.NODE_ENV || process.env.NODE_ENV === 'development'
-    ? 'http://localhost:5000'
-    : '';
+    ? 'http://localhost:8000'
+    : 'https://cis-557-deployment-activity-ap.herokuapp.com';
 
 httpClient.getToken = function () {
   return localStorage.getItem(tokenName);
