@@ -82,12 +82,12 @@ webapp.post('/api/login', (req, res) => {
 });
 
 // Root endpoint
-webapp.get('*', (req, res) => {
+webapp.get('*', (_req, res) => {
   res.sendFile(path.join(__dirname, './client/build/index.html'));
 });
 
 // Start server
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 8000;
 webapp.listen(port, () => {
   console.log(`Server running on port: ${port}`);
 });
